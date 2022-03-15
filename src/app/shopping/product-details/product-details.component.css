@@ -1,0 +1,17 @@
+.shopping{
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+    display: flex;
+}
+
+.productlist{
+    width: 50vw;
+    height: 100vh;
+    background-color: aqua;
+}
+.productdetails{
+    width: 50vw;
+    height: 100vh;
+    background-color: azure;
+}

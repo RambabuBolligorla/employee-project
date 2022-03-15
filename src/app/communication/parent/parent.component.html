@@ -1,0 +1,12 @@
+<p>parent works!</p>
+
+    <div class="parent">
+        <h2>parent:</h2>
+        <p>{{cv}}</p>
+
+        <input type="text" [(ngModel)]="pv">
+        <app-child [a]="pv" (e)="cath($event)"></app-child>
+        
+
+
+    </div>

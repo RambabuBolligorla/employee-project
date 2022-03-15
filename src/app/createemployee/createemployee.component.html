@@ -1,0 +1,114 @@
+<p>createemployee works!</p>
+<div>
+   
+
+        <h1>Create Employee Form</h1>
+        <form [formGroup]="createemployeeForm">
+
+        <label>Name:</label>
+        <input type="text" formControlName="name">
+        <br>
+
+        <label>Mobile:</label>
+        <input type="text" formControlName="mobile">
+        <br>
+
+        <label>Email:</label>
+        <input type="text"  formControlName="email">
+        <br>
+
+        <label>Dob:</label>
+        <input type="text" formControlName>
+        <br>
+        <label>ADDRESS:</label>
+        <br>
+
+        <label>Address Line:</label>
+        <input type="text" formControlName>
+        <br>
+
+        <label>State:</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label>City:</label>
+        <input type="text" formControlName="city">
+        <br>
+
+        <label>Pincode:</label>
+        <input type="text" formControlName="pincode">
+        <br>
+        <div formArrayName="education">
+            <div *ngFor="let education of educationFormArray.controls;let i=index">
+                <div formGroupName="{{i}}">
+
+    
+                        <label>Education</label>
+                        <br>
+
+                        <label>Qualification:</label>
+                        <input type="text" formControlName="qualification">
+                        <br>
+
+                        <label>Year:</label>
+                        <input type="text" formControlName="year">
+                        <br>
+
+                        <label>Percentage:</label>
+                        <input type="text" formControlName="percentage">
+                    <br>
+                </div>
+
+            </div>
+        </div>
+                
+         
+
+        <label>Role:</label>
+        <br>
+
+        <label>Frontend Engineer:</label>
+        <input type="radio" name="role" formControlName="role" value="Frontend Engineer">
+        
+        <label>Backend Engineer:</label>
+        <input type="radio" name="role" formControlName="role" value="Backend Engineeer">
+        <br>
+
+        <div *ngIf="createemployeeForm.get('role')?.value=='Frontend Engineer'">
+            <label>HTML:</label>
+            <input type="text" formControlName="HTML">
+            <br>
+            <label>CSS:</label>
+            <input type="text" formControlName="CSS">
+            <br>
+            <label>Javascript:</label>
+            <input type="text" formControlName="Javascript">
+            <br>
+            <label>Angular:</label>
+            <input type="text" formControlName="Angular">
+        </div>
+        <br>
+
+       <div *ngIf="createemployeeForm.get('role')?.value=='Backend Engineeer'">
+            <label>NodeJs:</label>
+            <input type="text" formControlName="NodeJs">
+        
+            <br>
+            <label>ExpressJs:</label>
+            <input type="text" formControlName="ExpressJs">
+            <br>
+            <label>MongoDb:</label>
+            <input type="text" formControlName="MongoDb">
+            <br>
+        </div>
+        <button (click)="submit()">submit</button>
+        <button (click)="addcart()">Addcart</button>
+
+
+
+
+
+
+    </form>
+</div>
+

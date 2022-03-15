@@ -1,0 +1,14 @@
+.row{
+    height:100%;
+    margin: 0%;
+
+}
+.div1{
+    height: 100vh;
+
+    background-color: yellow;
+}
+.div2{
+    height: 100vh;
+    background-color: red;
+}

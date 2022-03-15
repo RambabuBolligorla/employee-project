@@ -1,0 +1,28 @@
+<p>product-list works!</p>
+<div class=" row">
+    <div class="col-lg-6 div1">
+        <h2>product-list:</h2>
+        <div *ngFor="let product of products">
+                <div class="col-lg-6">
+
+                   <p><img src="{{product.image}}" height="50%" width="30%"></p>
+                </div>
+                    <div class="col-lg-6">
+                        <p>{{product.price}}</p>
+                        <p>{{product.title}}</p>
+                        
+                        <button (click)="view(product)">VIEW</button>
+                    </div>
+                    
+                
+                
+        </div>
+
+    </div>
+    <div class="col-lg-6 div2">
+        <h2>product-details:</h2>
+        
+        <app-product-details [product]="selectedproduct"  (e)="catch($event)"></app-product-details>
+
+    </div>
+</div>
